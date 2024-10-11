@@ -1,5 +1,5 @@
 <div>
-    componente livewire projects.show
+    <x-project-card :$project />
 
     <pre>
         title: {{ $project->title }}
