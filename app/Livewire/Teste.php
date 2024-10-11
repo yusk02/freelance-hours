@@ -2,8 +2,8 @@
 
 namespace App\Livewire;
 
-use Livewire\Component;
 use App\Models\User;
+use Livewire\Component;
 
 class Teste extends Component
 {
@@ -13,8 +13,8 @@ class Teste extends Component
     {
         return view('livewire.teste', [
             'users' => User::query()
-                ->when($this->search, fn($q) => $q->where('name', 'like', "%{$this->search}%"))
-                ->get()
+                ->when($this->search, fn ($q) => $q->where('name', 'like', "%{$this->search}%"))
+                ->get(),
         ]);
     }
 }
